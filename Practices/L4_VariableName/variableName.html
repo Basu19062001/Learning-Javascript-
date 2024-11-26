@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L5 Practice</title>
+</head>
+<body>
+        <h1 id="your-name"></h1>
+        <h3 id="bag-summery"></h3>
+    <script>
+        let basudevSamanta=0;
+        console.log(basudevSamanta);
+        let yourName = 'Basudev Samanta';
+        document.querySelector('#your-name').innerText = yourName;
+        // Myntra bag calculation
+        let finalBagPrice = (15599 - (10/100 * 15599))-272;
+        let finalJeansPrice = (2499 - (41/100 * 2499))-29;
+        let totalPrice = finalBagPrice + finalJeansPrice;
+        let giftCharge = 25;
+        let coneveneCharge = 20;
+        const gst = (118/100);
+        let bagSummery =  Math.round(((totalPrice + (giftCharge + coneveneCharge)) * gst ));
+        document.querySelector('#bag-summery').textContent = `Your final Myntra Bag amount is ₹${bagSummery}`;
+        console.log(`Your final Myntra Bag amount is ₹${bagSummery}`);
+        // 
+        console.log(5+2);
+        console.log('5'+2);
+        console.log(eval('5+2'));
+
+    </script>
+</body>
+</html>

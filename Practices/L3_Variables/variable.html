@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L4 Practice</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <button class="add-bag bag" onclick="cartCountity++; document.querySelector('#cart-summery').textContent = `Your bag has ${cartCountity} item`;">Add to Bag</button>
+    <button class="move-wish bag" onclick="cartCountity--; document.querySelector('#cart-summery').textContent = `Your bag has ${cartCountity} item`;">Move to Wishlist</button>
+    <button class="add-sale-item bag" onclick="cartCountity += 2; document.querySelector('#cart-summery').textContent = `Your bag has ${cartCountity} item`;">Add 1+1 Sale item</button>
+    <br>
+    <h1 id="cart-summery"></h1>
+
+    <script>
+        let cartCountity = 0;
+        document.querySelector('#cart-summery').textContent = `Your bag has ${cartCountity} item`;
+    </script>
+</body>
+</html>

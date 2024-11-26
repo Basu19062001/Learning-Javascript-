@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json
+    </title>
+</head>
+<body>
+    <script>
+        // This is a JS Data structure
+        let product = {
+            name: 'T-Shrit',
+            price: 599,
+            rating:{
+                starts: 4.5,
+                noOfReviews: 566,
+            },
+        };
+        console.log(typeof product);
+        console.log(product);
+        // JS to string [JSON]
+        let jsonStr = JSON.stringify(product);
+        console.log(typeof jsonStr);
+        console.log(jsonStr);
+
+        //Strnig to JS
+        let newProduct = JSON.parse(jsonStr);
+        console.log(typeof newProduct);
+        console.log(newProduct);
+    </script>
+</body>
+</html>

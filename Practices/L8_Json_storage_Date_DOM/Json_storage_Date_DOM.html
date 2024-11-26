@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Storage Date And DOM Practice
+
+    </title>
+    <style>
+        #my-button{
+            height: 50px;
+            width: 50px;
+            font-size: 25px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .js-odd{
+            background-color: aquamarine;
+        }
+        .js-even{
+            background-color: indianred;
+        }
+    </style>
+</head>
+<body>
+     <h1 id="greeting"></h1>
+
+    <button id="my-button" onclick="clickOnButton();"></button>
+     <script>
+        let noOfTimesClicked = localStorage.getItem('noOfTimesClicked') || 0;
+       function clickOnButton(){
+        noOfTimesClicked++;
+        localStorage.setItem('noOfTimesClicked',noOfTimesClicked);
+        updateButton();
+       }
+
+       function updateButton(){
+        let button = document.querySelector('#my-button');
+        
+        if(noOfTimesClicked % 2 === 0){
+            button.classList.remove('js-odd');
+            button.classList.add('js-even');
+
+        }else{
+            button.classList.remove('js-even');
+            button.classList.add('js-odd');
+        }
+        button.innerText = noOfTimesClicked;
+       }
+
+       updateButton();
+       
+       
+       function doGreeting(person = 'Dear'){
+            let date = new Date();
+        let hrs = date.getHours();
+        let greeting = document.querySelector('#greeting');
+        if(hrs > 5 && hrs < 12){
+            greeting.innerText = `Good Morning ${person}`;
+        }else if(hrs > 12 && hrs < 17){
+            greeting.innerText = `Good Afternoon ${person}`;
+        }else if(hrs > 17 && hrs < 19){
+            greeting.innerText = `Good Evening ${person}`;
+        }else{
+            greeting.innerText = `Good Night ${person}`;
+        }
+        }
+        
+        doGreeting();
+
+     </script>
+</body>
+</html>

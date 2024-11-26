@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects Creations and Accessing</title>
+</head>
+<body>
+
+
+    <script>
+        let product = {
+
+        };
+        console.log(product);
+        console.log(typeof product);
+
+        let product1 = {
+            Company: 'Mango',
+            item_name: 'T-Shirt',
+            price: 865,
+            'item-color':'White and blue',
+
+        };
+        console.log(product1);
+        // accessing method with dot notation
+        console.log(product1.Company);
+        console.log(product1.item_name);
+        console.log(product1.price);
+        // backet notation
+        console.log(product1['Company']);
+        console.log(product1['item_name']);
+        console.log(product1['price']);
+
+        let productColor =  'item-color';
+        console.log(product1[productColor]);
+        
+        // add
+        console.log(product1);
+        product1.Company = 'Banana';
+        console.log(product1);
+        
+        // delete
+        console.log(product1);
+        delete product1.Company;
+        console.log(product1);
+
+
+    </script>
+</body>
+</html>

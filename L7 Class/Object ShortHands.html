@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Shortcuts</title>
+</head>
+<body>
+    <script>
+        // Destructuring
+        let product = {
+            company: 'Mango',
+            itemName: 'T-Shirt',
+            price: 865,
+        };
+        // let company = product.company;
+        // console.log(company);
+        let{company,price} = product; //Destracturing Format // for same name of variable and oject key
+        console.log(company);
+        console.log(price);
+
+        // property shorthand
+        let cost = 865; 
+        let product1 = {
+            company: 'Mango',
+            itemName: 'T-Shirt',
+            // cost: 865, instead
+            cost
+        };
+        console.log(product1.cost);
+
+        //Methods Shorthand
+        let product2 = {
+            company: 'Mango',
+            itemName: 'T-Shirt',
+            cost: 865,
+            display(){
+                return this.cost;
+            }
+        };
+        console.log(product2.display());
+    </script>
+</body>
+</html>

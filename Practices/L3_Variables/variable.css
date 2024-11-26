@@ -1,0 +1,17 @@
+.bag{
+    padding: 5px;
+}
+.add-bag{
+    background-color: aquamarine;
+    border: none;
+    border-radius: 10px;
+}
+.move-wish{
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+.add-sale-item{
+    background-color: aquamarine;
+     border: none;
+    border-radius: 12px;
+}

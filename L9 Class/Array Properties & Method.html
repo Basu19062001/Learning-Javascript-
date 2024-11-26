@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Properties & Methods</title>
+</head>
+<body>
+    <script>
+        let nums = [1,32,3,4,5,7,7,7,3];
+        console.log(nums);
+        console.log(Array.isArray(nums));
+        
+        let arr = [1, 'Basu', true, null, {Name: `Samanta's Group`}];
+        console.log(arr);
+        console.log(Array.isArray(arr));
+
+        console.log(nums.length);
+        console.log(arr.length);
+
+        let numbers = [1,2,4,5,6];
+        console.log(numbers);
+        // push/pop used for add or remove of last element of array
+        numbers.push(45);
+        console.log(numbers);
+        numbers.pop();
+        console.log(numbers);
+        let popped = numbers.pop();
+        console.log(popped);
+        console.log(numbers);
+
+        //shift/unshift used for remove add or of first element of array
+        let newArr = [2,4,6,8,0,32];
+        console.log(newArr);
+        newArr.unshift(25);
+        console.log(newArr);
+        newArr.shift();
+        console.log(newArr);
+        let shiftedValue = newArr.shift();
+        console.log(shiftedValue);
+        console.log(newArr);
+
+
+        // splice used for remove elements in a range
+        let a = [1,2,4,5,7,8,55];
+        console.log(a);
+        a.splice(1,2);
+        console.log(a);
+        a.splice(3,2);
+        console.log(a);
+
+        // toString 
+        let n = [1,2,4,7];
+        console.log(n);
+        console.log(n.toString());
+
+        // sort -> doesn't working properly
+        let s = [3,4,2,1];
+        console.log(s);
+        s.sort();
+        console.log(s);
+
+        //valueOf used for copy an array
+        let v = [3,5,6,8,2];
+        console.log(v);
+        let copyArr = v.valueOf();
+        console.log(copyArr);
+        
+        // reffernce
+        let r = [1,2,4,5,7,3];
+        console.log(r);
+        let r2 = r;
+        console.log(r2);
+        r2[0] = 222;
+        console.log(r);
+
+        // De-Structuring 
+        let de = [1,2,4,5];
+        let [p,b,c,d] = de;
+        console.log(p+" "+b+" "+c+" "+d);
+    </script>
+</body>
+</html>

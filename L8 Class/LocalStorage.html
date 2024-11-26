@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Local Storage</title>
+</head>
+<body>
+    <script>
+        localStorage.setItem('Name', "Samanta's Group");
+        localStorage.setItem("Brand", "Quester");
+        localStorage.setItem("price",650);
+        console.log(localStorage.getItem('Brand'));
+
+        let product = {
+            company: "Samanta's Group",
+            brand: "Quester",
+            'Item-name': "T-Shrits",
+            price: 599,
+        };
+        
+        localStorage.setItem('c-product', product);
+        console.log(localStorage.getItem('c-product'));
+
+        localStorage.setItem('product',JSON.stringify(product));
+        console.log(localStorage.getItem('product'));
+
+        let newProduct = JSON.parse(localStorage.getItem('product'));
+        console.log(newProduct);
+
+        localStorage.removeItem('c_product');
+        localStorage.removeItem('C_product');
+
+        localStorage.clear();
+
+        console.log(localStorage.getItem('product'));
+
+
+    </script>
+</body>
+</html>

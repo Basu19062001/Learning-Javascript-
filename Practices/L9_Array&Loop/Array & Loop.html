@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practise For Array & Loop</title>
+</head>
+<body>
+    <h1 id="p"></h1>
+    <script>
+        let headign = document.querySelector('#p');
+        headign.innerText = 'Array & Loop Practise';
+
+        let arr = [5,6];
+        console.log(arr);
+        arr.push(7);
+        arr.unshift(4);
+        console.log(arr);
+        
+        console.log('------------------------------------------------------------------');
+        
+        function getElement(arr, position){
+            return arr[position-1];
+        }
+        let ele = [1,4,6,89,3,2,6,9];
+        console.log(getElement(ele,4));
+        
+        console.log('------------------------------------------------------------------');
+        
+        let copy = [1,2,45,6,8];
+        let copyArr = copy.slice(1,4);
+        console.log(copyArr);
+        let copyArr2 = copy.slice(0,5);
+        console.log(copyArr2);
+        copy[0] = null;
+        console.log(copy);
+        console.log(copyArr2);
+        
+        console.log('------------------------------------------------------------------');
+        
+        function isPrime(num){
+            for(let i=2; i<num; i++){
+                if(num %i === 0){
+                    return false;
+                }
+                return true;
+            }
+        }
+
+        let no = 2;
+        let count =0;
+        while(count < 5 ){
+            if(isPrime(no)){
+                console.log(no);
+                count++;
+            }
+            no++;
+        }
+
+        let n = 2;
+        let cnt =0;
+        while(true){
+            if(isPrime(n)){
+                console.log(n);
+                cnt++;
+                if(cnt === 5)
+                    break;  
+            }
+            n++;
+        }
+        
+        console.log('------------------------------------------------------------------');
+        
+        for(let i=10; i>=1; i--){
+            console.log(i);
+        }
+        
+        for(let i=1; i<=10; i++){
+            console.log(11-i);
+        }
+        
+        console.log('------------------------------------------------------------------');
+        
+        let cons = [1,-6,5,7,-98];
+        for(let i=0; i<cons.length; i++){
+            if(cons[i] < 0)
+            continue;
+        console.log(cons[i]);
+    }    
+    
+    console.log('------------------------------------------------------------------');
+
+    let accumulator = ['Basu','is','not','good','student'];
+    let res = '';
+    for(let i=0; i<accumulator.length; i++){
+        res +=  accumulator[i]+" ";
+    }
+    console.log(res);
+
+    console.log(accumulator.join(' '));
+    console.log(accumulator.join(','));
+    console.log(accumulator.join('_'));
+
+        </script>
+</body>
+</html>

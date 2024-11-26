@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>L6 Practice</title>
+  </head>
+  <body>
+    <script>
+      function checkEvenOrOdd(number) {
+        if (number % 2 === 0) {
+          return "Even";
+        } else {
+          return "Odd";
+        }
+      }
+      console.log(checkEvenOrOdd(5));
+
+      function getLergerNumber(a, b) {
+        // if (a > b) {
+        //   return a;
+        // } else {
+        //   return b;
+        // }
+        return a>b ? a : b; 
+    }
+        console.log(getLergerNumber(10, 2));
+        console.log(getLergerNumber(10, 20));
+        console.log(getLergerNumber(2.5, 2.5));
+
+        function convertCelsiusToFahrenheit(celsius) {
+          return (9 / 5) * celsius + 32;
+        }
+        console.log(convertCelsiusToFahrenheit(30)+' Degree Fahrenheit');
+    </script>
+  </body>
+</html>
