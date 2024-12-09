@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout & setinterval</title>
+</head>
+<body>
+    <h1>setTimeout & setInterval</h1>
+    <script>
+        console.log("-----------setTimeout---------");
+        let timeId = setTimeout(function(){
+            console.log("Wake up it's morning");
+        },1000);
+
+        let alarm = function(){
+            return console.log("Wake up it's evening");
+        }
+        console.log("After Wake up");
+        let timeId2 = setTimeout(alarm, 2000);
+
+        let alarm2 = ()=> console.log("It's Lunch time");
+        let timeId3 = setTimeout(alarm2, 3000);
+        
+        let timeId4 = setTimeout(()=>console.log("It's Dinner time"),4000);
+       
+        clearTimeout(timeId2);
+        
+        setTimeout(()=>console.log("-----------setInterval---------"),5000);
+        
+        setInterval(()=>console.log("It's morning"),1000);
+
+        let intervalId = setInterval(()=>console.log(`It's evening ${intervalId}`),2000);
+
+        setTimeout(()=> clearInterval(intervalId),3000);
+        
+    </script>
+</body>
+</html>

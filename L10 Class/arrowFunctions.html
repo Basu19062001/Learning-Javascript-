@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    <h1>Arrow Functions</h1>
+    <script>
+        //Anonymous Function
+        let sum = function (num1,num2){
+            return num1+num2;
+        }
+        console.log(sum(4,5));
+
+        // Arrow Functions
+
+        let sum2 = (num1,num2) => {
+            return num1 + num2;
+        }
+        console.log(sum2(8,9));
+        
+        // I can more optimize
+
+        let square = (num) => num*num;
+        let square1 = num => num*num;
+        
+        console.log(square(5));
+
+        // or
+
+        let newSum = (num1, num2) => num1 + num2;
+        console.log(newSum(1,2));
+        
+
+    </script>
+</body>
+</html>
