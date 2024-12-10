@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+</head>
+<body>
+    <button onclick="console.log('I am clicked with the help of onClick')">Click</button>
+    <button id="my-button">Click Me</button>
+    <button id="button-1">Button1</button>
+
+
+
+
+    <script>
+        let buttonElement = document.querySelector("#my-button");
+        buttonElement.addEventListener("click",event => console.log("I am clicked"));
+        let again = event => console.log("I am again clicked");
+        buttonElement.addEventListener("click", again);
+        
+        let behavior = event => console.log("Hello I am a button");
+        let button1 = document.querySelector("#button-1");
+        button1.addEventListener("click", behavior);
+        
+        buttonElement.removeEventListener("click", again);
+
+    </script>
+</body>
+</html>

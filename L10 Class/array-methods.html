@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+    <script>
+        let arr= [1,2,3,4,5,6,7,8,9];
+        let odds = arr.filter((nums, index)=>{
+            if(nums%2===1)
+            return true;
+            else return false;
+        });
+        console.log(odds);
+
+        let oddsArr = arr.filter((nums, index) => nums%2===1);
+        console.log(oddsArr);
+
+        let newArr = [2,3,4,5,6];
+        let mapArr = newArr.map((nums)=>{
+            return nums*nums;
+        });
+        console.log(mapArr);
+
+        let squares = newArr.map(nums => nums*nums);
+        console.log(squares);
+    </script>
+</body>
+</html>
